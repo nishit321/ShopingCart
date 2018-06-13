@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <!-- Default Folder is partials -->
+    {{> header}}
+    <div class="container">
+       {{{body}}}
+    </div>
+    <!-- Three curly braces is hook for our views to insert the content  -->
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
