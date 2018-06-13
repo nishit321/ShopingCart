@@ -36,8 +36,13 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// routes
+app.use((req,res,next)=>{
+  // loginGlobal is a global varible 
+  res.locals.loginGlobal = req.user;
+  next();
+})
 
+// routes
 app.use('/user',userRoutes);
 app.use('/', indexRouter);
 

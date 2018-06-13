@@ -7,14 +7,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Shopping Cart <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Shopping Cart <span class="sr-only">(current)</span></a>
+      </li>
+      {{# if loginGlobal}}
+      <li class="nav-item active">
+        <a class="nav-link" href="/user/profile"><i class="fas fa-user"></i>User Account <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-user"></i>User Account <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/user/logout">Logout <span class="sr-only">(current)</span></a>
+      </li>
+      {{else}}
+      <li class="nav-item active">
+        <a class="nav-link" href="/user/signin"><i class="fas fa-user"></i>Sign In <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/user/signup">Sign Up <span class="sr-only">(current)</span></a>
       </li>
+      {{/if}}
     </ul>
   
   

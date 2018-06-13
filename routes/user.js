@@ -37,7 +37,7 @@ router.get('/signup',(req,res)=>{
     res.render('users/profile');
   });
 
-  router.get('/logout',(req,res,next)=>{
+  router.get('/logout',isLoggedIn,(req,res,next)=>{
     req.logout();
     res.redirect('/');
   });
@@ -48,5 +48,4 @@ router.get('/signup',(req,res)=>{
         return next();
       }
       res.redirect('/');
-    
   }
